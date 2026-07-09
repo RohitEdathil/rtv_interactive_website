@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Docusight | rtv.interactive</title>
+    <meta name="description" content="Privacy Policy for Docusight document digitizer app, published by rtv.interactive.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Custom CSS (Relative path) -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Specific overrides for privacy document pages */
+        .policy-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background-color: var(--bg-secondary);
+            border: var(--border-chunky);
+            border-radius: var(--border-radius);
+            box-shadow: 6px 6px 0px var(--bg-tertiary);
+        }
+        .policy-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            border-bottom: var(--border-chunky);
+            padding-bottom: 1.5rem;
+        }
+        .policy-meta {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+        .policy-content h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem 0;
+            border-left: 3px solid var(--accent-alt);
+            padding-left: 0.8rem;
+        }
+        .policy-content h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        .policy-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+        .policy-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .policy-content li {
+            margin-bottom: 0.5rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            color: var(--text-primary);
+            transform: translateX(-4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-overlay"></div>
+    <div class="glow-orb" id="glow-orb"></div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html#home" class="logo">
+                rtv<span>.</span>interactive
+            </a>
+            <nav class="nav">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#games" class="nav-link">Games</a>
+                <a href="../index.html#privacy" class="nav-link active">Privacy</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="policy-container">
+            <a href="../index.html#privacy" class="back-link">← Back to Privacy</a>
+            
+            <h1 class="policy-title">Privacy Policy for <span class="highlight">Docusight</span></h1>
+            <div class="policy-meta">Last Updated: July 2026</div>
+
+            <div class="policy-content">
+                <p>
+                    This privacy policy governs your use of the software application <strong>Docusight</strong> for mobile devices, which was created by <strong>rtv.interactive</strong>. Docusight is an AI-powered document digitization application designed to transcribe physical pages, textbooks, and handwritten notes into editable digital formats (such as Markdown).
+                </p>
+
+                <h3>1. User-First Design Philosophy</h3>
+                <p>
+                    Docusight is designed around a <strong>local-first</strong> doctrine. We minimize backend data storage to the absolute necessary transactional data. All your organized projects, image lists, document structures, and final edited texts are stored locally on your device in a secure SQLite database and are never uploaded or synced to our backend servers.
+                </p>
+                <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-alt); border-left: 2px solid var(--accent-alt); padding-left: 0.8rem; margin: 1.5rem 0;">
+                    <em>"Storing data = database bills. I'm too cheap for database bills. So your data stays on your device. 😉"</em>
+                </p>
+
+                <h3>2. Information Collection and Usage</h3>
+                <p>
+                    To run the application's synchronization, credit balance, and AI-transcription services, I collect and process specific types of data as detailed below:
+                </p>
+
+                <h4>A. Account Information (Personal Data)</h4>
+                <p>
+                    When you sign in to Docusight, we authenticate your identity via <strong>Firebase Authentication</strong> (a Google service). We collect and store:
+                </p>
+                <ul>
+                    <li>Your unique Firebase user identifier (UID).</li>
+                    <li>Your registered email address (to sync credit balances).</li>
+                    <li>Your profile name and avatar image URL (optional, to personalize your profile view).</li>
+                </ul>
+                <p>
+                    This information is used strictly to sync your profile settings, track your credit ledger across devices, and prevent fraud.
+                </p>
+
+                <h4>B. Document Images and Uploads (Sensitive Data)</h4>
+                <p>
+                    To perform AI document digitization, the application must temporarily upload the images of pages you select to the Docusight backend. 
+                </p>
+                <ul>
+                    <li><strong>Processing Limit:</strong> These images are uploaded one page at a time.</li>
+                    <li><strong>No Long-Term Retention:</strong> Once the backend receives the image, it parses it using our AI engine, returns the transcribed Markdown content back to your mobile device, and immediately discards the source image. We do not store, retain, or index your source images or the resulting document text on our servers long-term.</li>
+                </ul>
+
+                <h4>C. Credit Ledger and Transactions</h4>
+                <p>
+                    We store a historical ledger of credit-related activities in our database:
+                </p>
+                <ul>
+                    <li>Transactions related to your account creation (signup bonus credits).</li>
+                    <li>Google Play Billing transactions (purchasing credits).</li>
+                    <li>Scan consumption logs (deducting credits per processed page).</li>
+                </ul>
+                <p>
+                    This transaction history is required for payment verification, account auditing, and support requests.
+                </p>
+
+                <h4>D. Usage Analytics</h4>
+                <p>
+                    I use <strong>Firebase Analytics</strong> (a Google service) to collect anonymous, aggregated usage statistics (such as active screens, session durations, and user interactions) and crash logs. This data is used strictly to diagnose bugs, monitor app stability, and improve overall product usability.
+                </p>
+
+                <h3>3. AI Processing (Google Gemini API)</h3>
+                <p>
+                    Docusight utilizes the official <strong>Google GenAI SDK (Gemini API)</strong> to analyze images and generate structured Markdown document files. 
+                </p>
+                <ul>
+                    <li>Your uploaded image data is transmitted securely to Google's API servers to be processed by the Gemini model.</li>
+                    <li>This transmission is conducted strictly in accordance with Google's API Terms of Service. Under standard API enterprise clauses, Google does not use customer data (including uploaded images or returned text) submitted via the API to train its machine learning models.</li>
+                </ul>
+
+                <h3>4. Third-Party Services</h3>
+                <p>
+                    Docusight integrates standard developer toolkits provided by third parties to facilitate core application workflows:
+                </p>
+                <ul>
+                    <li><strong>Firebase Authentication:</strong> Manages secure user login and token generation.</li>
+                    <li><strong>Google Play Billing API:</strong> Processes in-app purchases of scanning credits securely. We do not collect or store credit card details or financial identifiers; all billing is handled directly by Google Play.</li>
+                    <li><strong>Firebase Analytics:</strong> Collects anonymous telemetry and aggregated usage statistics to monitor app stability and improve product performance.</li>
+                </ul>
+
+                <h3>5. Data Deletion (User Control)</h3>
+                <p>
+                    I respect your ownership of your data. You have the right to request deletion of your account and associated database details at any time:
+                </p>
+                <ul>
+                    <li>You can trigger account deletion directly in the app settings, or by emailing me.</li>
+                    <li>Upon account deletion, all personal data associated with your profile (Firebase UID, email, name, avatar) and transaction records will be permanently purged from the Docusight active database.</li>
+                    <li>Please note that locally stored document projects can be deleted by uninstalling the application or clearing the application's local database cache on your device.</li>
+                </ul>
+
+                <h3>6. Children's Privacy</h3>
+                <p>
+                    Docusight does not knowingly collect or solicit personal information from children under the age of 13. Since the application processes documents uploaded by the user, if you are a parent or guardian and believe your child has uploaded sensitive document data, please contact me immediately so it can be purged.
+                </p>
+
+                <h3>7. Changes to This Policy</h3>
+                <p>
+                    This Privacy Policy may be updated periodically to reflect changes in regulatory requirements or app functionalities. Any modifications will be posted directly to this URL, updating the modified date at the top of this document.
+                </p>
+
+                <h3>8. Contact Me</h3>
+                <p>
+                    If you have questions about this policy, or if you need to request deletion of your account ledger data, please contact me via email at <code style="color: var(--accent);">rohitedathil@gmail.com</code>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 rtv.interactive. All rights reserved.</p>
+                <p class="subtle">Crafted with vanilla HTML, CSS, and JS. Funky by design.</p>
+            </div>
+            <div class="footer-right">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS for general interactivity (glow orb) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initGlowOrb();
+        });
+
+        function initGlowOrb() {
+            const orb = document.getElementById('glow-orb');
+            if (!orb) return;
+            window.addEventListener('mousemove', (e) => {
+                orb.style.left = `${e.clientX}px`;
+                orb.style.top = `${e.clientY}px`;
+            });
+        }
+    </script>
+</body>
+</html>

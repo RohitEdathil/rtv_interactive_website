@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rtv.interactive | Minimalist Apps & Games</title>
+    <meta name="description" content="rtv.interactive is a part-time side project crafting minimalist utilities, strategic board games, and clean interactive tools.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background grid decoration -->
+    <div class="grid-overlay"></div>
+    <div class="glow-orb" id="glow-orb"></div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#home" class="logo" id="logo">
+                rtv<span>.</span>interactive
+            </a>
+            <nav class="nav">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#games" class="nav-link" data-section="games">Games</a>
+                <a href="#privacy" class="nav-link" data-section="privacy">Privacy</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <div class="badge">STATUS: COOKING</div>
+                    <h1 class="hero-title">I make tiny, strategic, <span class="highlight">interactive</span> things.</h1>
+                    <p class="hero-subtitle">
+                        A solo, part-time hobby crafting minimalist utility apps, strategic games, and clean interactive interfaces. No tracking, no bloat, offline-first.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#games" class="btn btn-primary">Browse Games</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-widget-container">
+                    <div class="widget-header">
+                        <div class="widget-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <div class="widget-title">chain_reaction_sandbox.exe</div>
+                    </div>
+                    <div class="widget-body">
+                        <div class="game-instructions">Click grid cells to place dots. Trigger chain reactions!</div>
+                        <div class="sandbox-grid" id="sandbox-grid"></div>
+                        <div class="sandbox-controls">
+                            <span id="turn-indicator">Player 1 (Green) Turn</span>
+                            <button id="reset-sandbox" class="btn-sm">Reset Board</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">my <span class="highlight">games</span></h2>
+                    <p class="section-desc">Minimalist concepts, satisfying mechanics. Available on mobile devices.</p>
+                </div>
+                <div class="games-grid">
+                    <!-- Game 1: Chain Reaction Neo -->
+                    <div class="game-card">
+                        <div class="game-visual reaction-visual">
+                            <div class="neo-nodes">
+                                <div class="node pulse-green"></div>
+                                <div class="node pulse-red"></div>
+                                <div class="node pulse-blue"></div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-header">
+                                <h3 class="game-title">Chain Reaction Neo</h3>
+                                <span class="game-tag">Multiplayer Strategy</span>
+                            </div>
+                            <p class="game-description">
+                                A modern, minimalist digital recreation of the classic multiplayer strategy game. Players take turns placing colored cells on a grid. When a cell reaches capacity, it explodes, converting adjacent cells and triggering chaotic chain reactions.
+                            </p>
+                            <div class="game-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.rtv.cr_neo" target="_blank" rel="noopener noreferrer" class="btn-game google-play">
+                                    Get on Play Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game 2: Wordicate -->
+                    <div class="game-card">
+                        <div class="game-visual wordicate-visual">
+                            <div class="wordicate-grid">
+                                <div class="letter-tile active">W</div>
+                                <div class="letter-tile">O</div>
+                                <div class="letter-tile">R</div>
+                                <div class="letter-tile">D</div>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-header">
+                                <h3 class="game-title">Wordicate</h3>
+                                <span class="game-tag">Word Puzzle</span>
+                            </div>
+                            <p class="game-description">
+                                A relaxing yet challenging word-building puzzle game designed to sharpen your vocabulary and spelling skills. Arrange letter tiles, discover words on the board, and find the perfect path to unlock high scores.
+                            </p>
+                            <div class="game-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.rtv.wordicate" target="_blank" rel="noopener noreferrer" class="btn-game google-play">
+                                    Get on Play Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section id="privacy" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">privacy <span class="highlight">policies</span></h2>
+                    <p class="section-desc">I respect your privacy. Here is the legal breakdown for each of my apps.</p>
+                    <p class="section-desc-quirky" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-alt); margin-top: 0.8rem; opacity: 0.85;">
+                    * Storing data = database bills. I'm too cheap for database bills. So your data stays on your device. 😉
+                    </p>
+                </div>
+                
+
+
+                <div class="privacy-cards-grid">
+                    <a href="privacy/chain-reaction-neo.html" class="privacy-card-link">
+                        <div class="privacy-card">
+                            <div class="privacy-card-header">
+                                <h4>Chain Reaction Neo</h4>
+                                <span class="arrow-icon">→</span>
+                            </div>
+                            <p>Read the privacy policy for Chain Reaction Neo, Chain Reaction Neo+, and related local multiplayer versions.</p>
+                            <div class="privacy-card-meta">Updated: July 2026</div>
+                        </div>
+                    </a>
+
+                    <a href="privacy/wordicate.html" class="privacy-card-link">
+                        <div class="privacy-card">
+                            <div class="privacy-card-header">
+                                <h4>Wordicate</h4>
+                                <span class="arrow-icon">→</span>
+                            </div>
+                            <p>Read the privacy policy for Wordicate word building puzzle app.</p>
+                            <div class="privacy-card-meta">Updated: July 2026</div>
+                        </div>
+                    </a>
+
+                    <a href="privacy/docusight.html" class="privacy-card-link">
+                        <div class="privacy-card">
+                            <div class="privacy-card-header">
+                                <h4>Docusight</h4>
+                                <span class="arrow-icon">→</span>
+                            </div>
+                            <p>Read the privacy policy for Docusight AI-powered document digitizer utility app.</p>
+                            <div class="privacy-card-meta">Updated: July 2026</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">about <span class="highlight">the hobby</span></h2>
+                    <p class="section-desc">Who, what, and why behind rtv.interactive.</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text-block">
+                        <h3>Part-Time Passion</h3>
+                        <p>
+                            rtv.interactive is a personal side hobby born out of a love for clean user interfaces, game mechanics, and minimalist utility apps. 
+                        </p>
+                        <p>
+                            By day, I write standard software. By night, I experiment with utility apps, grid puzzles, and board games. The goal is to build things that run fast, look clean, and respect the user's privacy and intelligence.
+                        </p>
+                        <h3>Zero Bloat Philosophy</h3>
+                        <p>
+                            Many mobile apps and games today are filled with aggressive tracking, screen-wide ads, and heavy cloud dependencies. rtv.interactive tools aim to be the opposite: local-first, minimal permissions, and immediate functionality.
+                        </p>
+                    </div>
+                    
+                    <div class="about-spec-box">
+                        <h4>Hobby Details</h4>
+                        <ul class="spec-list">
+                            <li><strong>Focus:</strong> Minimalist UI, Local Utilities, Puzzles</li>
+                            <li><strong>Ethics:</strong> Zero trackers, offline play</li>
+                            <li><strong>Status:</strong> Active side-hobby</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 rtv.interactive. All rights reserved.</p>
+                <p class="subtle">Crafted with vanilla HTML, CSS, and JS. Funky by design.</p>
+            </div>
+            <div class="footer-right">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
